@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:train/variables.dart';
+import 'package:train/constants.dart';
 
 // ignore: must_be_immutable
 class Zkr extends StatefulWidget {
@@ -28,7 +28,6 @@ class _ZkrState extends State<Zkr> {
       child: Column(
         children: [
           Padding(
-            // padding: title != ''? const EdgeInsets.only(bottom: 10) : const EdgeInsets.only(bottom: 0),
             padding: const EdgeInsets.only(bottom: 10),
             child: Text(
               widget.title,
@@ -46,7 +45,7 @@ class _ZkrState extends State<Zkr> {
                 color: mainTextColor,
                 fontSize: 18,
                 fontFamily: 'Cairo',
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.normal,
                 height: 1.5),
             textDirection: TextDirection.rtl,
           ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:train/variables.dart';
+import 'package:train/constants.dart';
 
 class AzkarBox extends StatelessWidget {
   const AzkarBox({super.key, required this.text, required this.onTap});
@@ -10,12 +10,16 @@ class AzkarBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isSMobile = MediaQuery.of(context).size.width <= 360;
+    final isMMobile = MediaQuery.of(context).size.width <= 390;
 
     return GestureDetector(
         onTap: onTap,
         child:  Container(
             margin: const EdgeInsets.all(10),
-            padding: const EdgeInsets.only(
+            padding: isMMobile? const EdgeInsets.only(
+                right: 0, bottom: 10, left: 0)
+                : const EdgeInsets.only(
                 right: 10, bottom: 20, left: 10),
             decoration: BoxDecoration(
                 color: boxColor,
@@ -36,17 +40,17 @@ class AzkarBox extends StatelessWidget {
                       padding: const EdgeInsets.only(right: 20),
                       child: Text(
                         text,
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: mainTextColor,
-                          fontSize: 16,
+                          fontSize: isSMobile? 12:16,
                           fontFamily: 'Cairo',
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
-                    const Icon(
+                    Icon(
                       Icons.arrow_left_rounded,
-                      size: 40,
+                      size: isSMobile? 25:40,
                       color: mainTextColor,
                     )
                   ],

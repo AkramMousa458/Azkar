@@ -10,6 +10,7 @@ const secondTextColor = Colors.blueGrey;
 
 const buttonColor = Color(0xFF2966a3);
 const buttonColorDisabled = Colors.black12;
+const buttonDeleteColor = Colors.redAccent;
 
 const boxColor = Color(0xFF192734);
 
@@ -41,6 +42,24 @@ class SharedData{
         break;
       case 'azkarSleep' :
         azkarSleep = prefs.getInt('azkarSleep');
+        break;
+    }
+}
+
+  static void deleteZkr({required String name}) async {
+    prefs = await SharedPreferences.getInstance();
+    switch (name) {
+      case 'azkarElsabah' :
+        await prefs.setInt('azkarElsabah', 0);
+        break;
+      case 'azkarElmasaa' :
+        await prefs.setInt('azkarElmasaa', 0);
+        break;
+      case 'azkarElsalah' :
+        await prefs.setInt('azkarElsalah', 0);
+        break;
+      case 'azkarSleep' :
+        await prefs.setInt('azkarSleep', 0);
         break;
     }
 }

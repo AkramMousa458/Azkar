@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:train/variables.dart';
+import 'package:train/constants.dart';
 import 'package:train/components/zkr.dart';
 
 class AzkarElsalahPage extends StatelessWidget {
