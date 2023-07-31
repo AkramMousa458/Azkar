@@ -17,6 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
 
+  @override
   @protected
   @mustCallSuper
   void initState() {
@@ -189,7 +190,57 @@ class _HomePageState extends State<HomePage> {
                               fontWeight: FontWeight.bold),
                         ),
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              showDialog(context: context, builder: (context){
+                                return AlertDialog(
+                                  title: const Text(
+                                    'أذكار اخري',
+                                    style: TextStyle(
+                                      color: mainTextColor,
+                                      fontSize: 20,
+                                      fontFamily: 'Cairo',
+                                    ),
+                                    textDirection: TextDirection.rtl,
+                                  ),
+                                  content:  const Text(
+                                    'لم يتم إضافتها بعد',
+                                    style: TextStyle(
+                                      color: mainTextColor,
+                                      fontSize: 16,
+                                      fontFamily: 'Cairo',
+                                    ),
+                                    textDirection: TextDirection.rtl,
+                                  ),
+                                  backgroundColor: boxColor,
+                                  contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                                  actionsPadding: const EdgeInsets.only(top: 10, right: 10, bottom: 20),
+                                  actions: [
+                                    GestureDetector(
+                                      onTap: (){
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Container(
+                                        padding:
+                                        const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+                                        decoration: BoxDecoration(
+                                          color: buttonColor,
+                                          borderRadius: BorderRadius.circular(8),
+                                        ),
+                                        child: const Text(
+                                          'حسناََ',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: mainTextColor,
+                                              fontFamily: 'Cairo',
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                );
+                              });
+                            },
                             icon: const Icon(
                               Icons.arrow_left_rounded,
                               size: 30,

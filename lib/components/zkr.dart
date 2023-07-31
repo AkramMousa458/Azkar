@@ -43,10 +43,10 @@ class _ZkrState extends State<Zkr> {
             textAlign: TextAlign.center,
             style: const TextStyle(
                 color: mainTextColor,
-                fontSize: 18,
+                fontSize: 17,
                 fontFamily: 'Cairo',
                 fontWeight: FontWeight.normal,
-                height: 1.5),
+                height: 1.6),
             textDirection: TextDirection.rtl,
           ),
           GestureDetector(
