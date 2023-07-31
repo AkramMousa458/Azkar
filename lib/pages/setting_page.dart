@@ -107,7 +107,7 @@ class _SettingPageState extends State<SettingPage> {
                                       onTap: (){
                                         setState(() {
                                           isClicked1 = true;
-                                          SharedData.deleteZkr(name: 'azkarElsabah');
+                                          deleteZkr(name: 'azkarElsabah');
                                           azkarElsabah = 0;
                                           Navigator.of(context).pop();
                                         });
@@ -229,7 +229,7 @@ class _SettingPageState extends State<SettingPage> {
                                       onTap: (){
                                         setState(() {
                                           isClicked2 = true;
-                                          SharedData.deleteZkr(name: 'azkarElmasaa');
+                                          deleteZkr(name: 'azkarElmasaa');
                                           azkarElmasaa = 0;
                                           Navigator.of(context).pop();
                                         });
@@ -351,7 +351,7 @@ class _SettingPageState extends State<SettingPage> {
                                       onTap: (){
                                         setState(() {
                                           isClicked3 = true;
-                                          SharedData.deleteZkr(name: 'azkarSleep');
+                                          deleteZkr(name: 'azkarSleep');
                                           azkarSleep = 0;
                                           Navigator.of(context).pop();
                                         });
@@ -473,7 +473,7 @@ class _SettingPageState extends State<SettingPage> {
                                       onTap: (){
                                         setState(() {
                                           isClicked4 = true;
-                                          SharedData.deleteZkr(name: 'azkarElsalah');
+                                          deleteZkr(name: 'azkarElsalah');
                                           azkarElsalah = 0;
                                           Navigator.of(context).pop();
                                         });

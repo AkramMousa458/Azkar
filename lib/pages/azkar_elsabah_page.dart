@@ -234,7 +234,7 @@ class AzkarElsabahPage extends StatelessWidget {
                         ],
                       );
                     });
-                    SharedData.setZkr(name: 'azkarElsabah', num: azkarElsabah == null ? 1 : azkarElsabah += 1);
+                    setZkr(name: 'azkarElsabah', num: azkarElsabah == null ? 1 : azkarElsabah += 1);
                   },
                   child: Container(
                     padding: const EdgeInsets.all(10),

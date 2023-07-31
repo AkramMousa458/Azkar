@@ -245,7 +245,7 @@ class AzkarElmasaaPage extends StatelessWidget {
                         ],
                       );
                     });
-                    SharedData.setZkr(name: 'azkarElmasaa', num: azkarElmasaa == null ? 1 : azkarElmasaa += 1);
+                    setZkr(name: 'azkarElmasaa', num: azkarElmasaa == null ? 1 : azkarElmasaa += 1);
                   },
                   child: Container(
                     padding: const EdgeInsets.all(10),

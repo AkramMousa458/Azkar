@@ -60,7 +60,7 @@ class AzkarSleepPage extends StatelessWidget {
                   title: '',
                   body:
                       'الـحَمْدُ للهِ الَّذي أَطْـعَمَنا وَسَقـانا، وَكَفـانا، وَآوانا، فَكَـمْ مِمَّـنْ لا كـافِيَ لَـهُ وَلا مُـؤْوي.',
-                  number: 3),
+                  number: 1),
               Zkr(
                   title: '',
                   body:
@@ -75,7 +75,7 @@ class AzkarSleepPage extends StatelessWidget {
                   title: '',
                   body:
                       'يجمع كفيه ثم ينفث فيهما والقراءة فيهما‏:‏ ‏{‏قل هو الله أحد‏}‏ و‏{‏قل أعوذ برب الفلق‏}‏ و‏{‏قل أعوذ برب الناس‏}‏ ومسح ما استطاع من الجسد يبدأ بهما على رأسه ووجه وما أقبل من جسده.',
-                  number: 1),
+                  number: 3),
               Zkr(
                   title: 'أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيمِ',
                   body:
@@ -155,7 +155,7 @@ class AzkarSleepPage extends StatelessWidget {
                         ],
                       );
                     });
-                    SharedData.setZkr(name: 'azkarSleep', num: azkarSleep == null ? 1 : azkarSleep += 1);
+                    setZkr(name: 'azkarSleep', num: azkarSleep == null ? 1 : azkarSleep += 1);
                   },
                   child: Container(
                     padding: const EdgeInsets.all(10),

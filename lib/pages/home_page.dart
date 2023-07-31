@@ -17,16 +17,16 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
 
+
   @override
-  @protected
-  @mustCallSuper
   void initState() {
     super.initState();
     setState(() {
-      SharedData.getZkr(name: 'azkarElsabah');
-      SharedData.getZkr(name: 'azkarElmasaa');
-      SharedData.getZkr(name: 'azkarSleep');
-      SharedData.getZkr(name: 'azkarElsalah');
+      getZkr(name: 'azkarElsabah');
+      getZkr(name: 'azkarElmasaa');
+      getZkr(name: 'azkarSleep');
+      getZkr(name: 'azkarElsalah');
+      print('return home');
     });
   }
 
@@ -57,9 +57,9 @@ class _HomePageState extends State<HomePage> {
                           ))
                               .then((value) {
                             setState(() {
-                              SharedData.getZkr(name: 'azkarElsabah');
-                              SharedData.getZkr(name: 'azkarElmasaa');
-                              SharedData.getZkr(name: 'azkarSleep');
+                              getZkr(name: 'azkarElsabah');
+                              getZkr(name: 'azkarElmasaa');
+                              getZkr(name: 'azkarSleep');
                             });
                           });
                         },
@@ -264,7 +264,7 @@ class _HomePageState extends State<HomePage> {
                           ))
                               .then((value) {
                             setState(() {
-                              SharedData.getZkr(name: 'azkarElsabah');
+                              getZkr(name: 'azkarElsabah');
                             });
                           });
                         }
@@ -278,7 +278,7 @@ class _HomePageState extends State<HomePage> {
                           ))
                               .then((value) {
                             setState(() {
-                              SharedData.getZkr(name: 'azkarElmasaa');
+                              getZkr(name: 'azkarElmasaa');
                             });
                           });
                         }
@@ -298,7 +298,7 @@ class _HomePageState extends State<HomePage> {
                           ))
                               .then((value) {
                             setState(() {
-                              SharedData.getZkr(name: 'azkarElsalah');
+                              getZkr(name: 'azkarElsalah');
                             });
                           });
                         }),
@@ -311,7 +311,7 @@ class _HomePageState extends State<HomePage> {
                           ))
                               .then((value) {
                             setState(() {
-                              SharedData.getZkr(name: 'azkarSleep');
+                              getZkr(name: 'azkarSleep');
                             });
                           });
                         }),
