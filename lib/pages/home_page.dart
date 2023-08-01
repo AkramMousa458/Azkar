@@ -22,25 +22,12 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     Future.delayed(Duration.zero, () => showStartDialog(context));
-    // setState(() {
-    //   getZkr(name: 'azkarElsabah');
-    //   getZkr(name: 'azkarElmasaa');
-    //   getZkr(name: 'azkarSleep');
-    //   getZkr(name: 'azkarElsalah');
-    //   print('return home');
-    // });
   }
 
   bool isClicked = false;
 
   @override
   Widget build(BuildContext context) {
-    // setState(() {
-    //   getZkr(name: 'azkarElsabah');
-    //   getZkr(name: 'azkarElmasaa');
-    //   getZkr(name: 'azkarSleep');
-    //   getZkr(name: 'azkarElsalah');
-    // });
     final isSMobile = MediaQuery.of(context).size.width <= 360;
     final isMMobile = MediaQuery.of(context).size.width <=390;
 
