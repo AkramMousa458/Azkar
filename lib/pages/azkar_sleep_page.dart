@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:train/constants.dart';
 import 'package:train/components/zkr.dart';
+import '../components/finish_azkar_dialog_box.dart';
 
 class AzkarSleepPage extends StatelessWidget {
   const AzkarSleepPage({super.key});
@@ -74,7 +75,7 @@ class AzkarSleepPage extends StatelessWidget {
               Zkr(
                   title: '',
                   body:
-                      'يجمع كفيه ثم ينفث فيهما والقراءة فيهما‏:‏ ‏{‏قل هو الله أحد‏}‏ و‏{‏قل أعوذ برب الفلق‏}‏ و‏{‏قل أعوذ برب الناس‏}‏ ومسح ما استطاع من الجسد يبدأ بهما على رأسه ووجه وما أقبل من جسده.',
+                      'يجمع كفيه ثم ينفث فيهما والقراءة فيهما‏:‏ ‏{‏قل هو الله أحد‏}‏ و‏{‏قل أعوذ برب الفلق‏}‏ و‏{‏قل أعوذ برب الناس‏}‏ ومسح ما استطاع من الجسد يبدأ بهما على رأسه ووجهما أقبل من جسده.',
                   number: 3),
               Zkr(
                   title: 'أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيمِ',
@@ -105,56 +106,7 @@ class AzkarSleepPage extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 15),
                 child: GestureDetector(
                   onTap: () {
-                    showDialog(context: context, builder: (context){
-                      return AlertDialog(
-                        title: const Text(
-                          'ما شاء الله',
-                          style: TextStyle(
-                            color: mainTextColor,
-                            fontSize: 20,
-                            fontFamily: 'Cairo',
-                          ),
-                          textDirection: TextDirection.rtl,
-                        ),
-                        content:  const Text(
-                          'لقد أنهيت الأذكار',
-                          style: TextStyle(
-                            color: mainTextColor,
-                            fontSize: 16,
-                            fontFamily: 'Cairo',
-                          ),
-                          textDirection: TextDirection.rtl,
-                        ),
-                        backgroundColor: boxColor,
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                        actionsPadding: const EdgeInsets.only(top: 10, right: 10, bottom: 20),
-                        actions: [
-                          GestureDetector(
-                            onTap: (){
-                              Navigator.pop(context);
-                              Navigator.of(context).pop();
-                            },
-                            child: Container(
-                              padding:
-                              const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
-                              decoration: BoxDecoration(
-                                color: buttonColor,
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: const Text(
-                                'حسناََ',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: mainTextColor,
-                                    fontFamily: 'Cairo',
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ],
-                      );
-                    });
+                    finishAzkarDialogBox(context);
                     setZkr(name: 'azkarSleep', num: azkarSleep == null ? 1 : azkarSleep += 1);
                   },
                   child: Container(

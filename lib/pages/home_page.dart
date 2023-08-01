@@ -21,19 +21,26 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    setState(() {
-      getZkr(name: 'azkarElsabah');
-      getZkr(name: 'azkarElmasaa');
-      getZkr(name: 'azkarSleep');
-      getZkr(name: 'azkarElsalah');
-      print('return home');
-    });
+    Future.delayed(Duration.zero, () => showStartDialog(context));
+    // setState(() {
+    //   getZkr(name: 'azkarElsabah');
+    //   getZkr(name: 'azkarElmasaa');
+    //   getZkr(name: 'azkarSleep');
+    //   getZkr(name: 'azkarElsalah');
+    //   print('return home');
+    // });
   }
 
   bool isClicked = false;
 
   @override
   Widget build(BuildContext context) {
+    // setState(() {
+    //   getZkr(name: 'azkarElsabah');
+    //   getZkr(name: 'azkarElmasaa');
+    //   getZkr(name: 'azkarSleep');
+    //   getZkr(name: 'azkarElsalah');
+    // });
     final isSMobile = MediaQuery.of(context).size.width <= 360;
     final isMMobile = MediaQuery.of(context).size.width <=390;
 
@@ -341,4 +348,64 @@ class _HomePageState extends State<HomePage> {
       )
     );
   }
+  void showStartDialog(BuildContext context){
+    showDialog(context: context, builder: (context){
+      return AlertDialog(
+        title: const Text(
+          'مرحباََ',
+          style: TextStyle(
+            color: mainTextColor,
+            fontSize: 20,
+            fontFamily: 'Cairo',
+          ),
+          textDirection: TextDirection.rtl,
+          textAlign: TextAlign.center,
+        ),
+        content:  const Text(
+          'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّه الْعَظِيم',
+          style: TextStyle(
+            color: mainTextColor,
+            fontSize: 16,
+            fontFamily: 'Cairo',
+          ),
+          textDirection: TextDirection.rtl,
+          textAlign: TextAlign.center,
+        ),
+        backgroundColor: boxColor,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+        actionsPadding: const EdgeInsets.only(top: 10, right: 10, bottom: 20),
+        actions: [
+          GestureDetector(
+            onTap: (){
+              setState(() {
+                getZkr(name: 'azkarElsabah');
+                getZkr(name: 'azkarElmasaa');
+                getZkr(name: 'azkarSleep');
+                getZkr(name: 'azkarElsalah');
+              });
+              Navigator.of(context).pop();
+            },
+            child: Container(
+              padding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+              decoration: BoxDecoration(
+                color: buttonColor,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const Text(
+                'تم',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 12,
+                    color: mainTextColor,
+                    fontFamily: 'Cairo',
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+        ],
+      );
+    });
+  }
 }
+
