@@ -21,6 +21,12 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
+    setState(() {
+      getZkr(name: 'azkarElsabah');
+      getZkr(name: 'azkarElmasaa');
+      getZkr(name: 'azkarSleep');
+      getZkr(name: 'azkarElsalah');
+    });
     Future.delayed(Duration.zero, () => showStartDialog(context));
   }
 
